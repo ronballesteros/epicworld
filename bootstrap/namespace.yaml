@@ -1,0 +1,19 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: epicworld
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: lnd
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: bitcoind
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: monitoring

@@ -1,0 +1,4 @@
+resources:
+  - epicworld.yaml
+  - epicworldrepo.yaml
+  - namespace.yaml

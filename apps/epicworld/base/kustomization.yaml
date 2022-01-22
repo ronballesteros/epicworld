@@ -1,8 +1,0 @@
-namespace: epicworld
-
-commonLabels:
-  owner: epicworld
-
-resources:
-  - gitrepository.yaml
-  - helmrelease.yaml
