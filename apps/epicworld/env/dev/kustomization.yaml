@@ -1,0 +1,16 @@
+namespace: epicworld
+
+resources:
+  - ../../base
+  - lnd-helmrelease/lnd-helmrelease.yaml
+#  - secrets.yaml
+#  #- fortify-helmrelease/fortify-helmrelease.yaml
+#  #- netpolicy-helmrelease.yaml
+#  #- jira-helmrelease/jira-helmrelease.yaml
+#  #- confluence-helmrelease/confluence-helmrelease.yaml
+#  #- odoo-helmrelease/odoo-helmrelease.yaml
+#
+patchesStrategicMerge:
+  - patch-epicworld.yaml
+#  - reclaimpolicy-patch.yaml
+#  - patch-gitrepo.yaml
