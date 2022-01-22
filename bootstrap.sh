@@ -15,9 +15,6 @@ flux check --pre
 # install flux
 kustomize build ./flux | kubectl apply -f -
 
-# create flux namespace
-kubectl create ns flux-system || true
-
 # # wait for flux
 flux check
 
