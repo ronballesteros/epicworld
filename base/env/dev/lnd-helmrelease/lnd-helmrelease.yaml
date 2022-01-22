@@ -1,0 +1,30 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: lnd
+  namespace: epicworld
+spec:
+  interval: 1m0s
+#  ref:
+#    tag: 0.1.0-bb.8
+  url: https://github.com/ronballesteros/lnd.git
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: lnd
+  namespace: epicworld
+spec:
+  releaseName: lnd
+  targetNamespace: lnd
+  chart:
+    spec:
+      chart: chart
+      sourceRef:
+        kind: GitRepository
+        name: lnd
+        namespace: epicworld
+  interval: 1m0s
+  valuesFrom:
+    - name: lnd-values
+      kind: ConfigMap
