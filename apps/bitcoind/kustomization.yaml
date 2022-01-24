@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: bitcoind
+resources:
+  - namespace.yaml
+  - release.yaml
+  - repository.yaml
+
+configMapGenerator:
+  - name: bitcoind-values
+    files:
+      - values.yaml=values.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true

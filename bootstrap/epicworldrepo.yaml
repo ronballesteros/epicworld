@@ -1,0 +1,13 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: epicworld
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    tag: ""
+    branch: "dev-rballesteros"
+  url: https://github.com/LN-Zap-Olymp/Infrastructure-ronballesteros.git
+  secretRef:
+    name: repository-credentials
