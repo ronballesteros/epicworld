@@ -7,7 +7,7 @@ spec:
   interval: 1m0s
   ref:
     tag: ""
-    branch: "dev-rballesteros"
-  url: https://github.com/LN-Zap-Olymp/Infrastructure-ronballesteros.git
+    branch: "dev-ronb"
+  url: https://github.com/ronballesteros/epicworld.git
   secretRef:
     name: repository-credentials
